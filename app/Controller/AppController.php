@@ -37,8 +37,8 @@ class AppController extends Controller {
         'Cookie',
         'Auth' => array(
             'loginRedirect' => array(
-                'controller' => 'home',
-                'action' => 'index'
+                'controller' => 'users',
+                'action' => 'profile'
             ),
             'logoutRedirect' => array(
                 'controller' => 'home',

@@ -30,6 +30,7 @@
 
   	  <?php echo $this->Form->end(array('label'=> 'CONCLUIR CADASTRO', 'class'=>'btn btn-primary', 'style'=>'width: 100%', 'id' => 'btn_register', 'data-loading-text' => 'ENVIANDO CADASTRO ...')); ?> 
         <br />
-      <div style="text-align: right"><?php echo $this->Html->link('Já sou cadastrado', array('controller' => 'users', 'action' =>'login'), array('class'=>'')); ?></div>
+      <div style="text-align: right"><?php echo $this->Html->link('Já sou cadastrado, entrar', array('controller' => 'users', 'action' =>'login'), array('class'=>'')); ?></div>
+      <br />
  	</div>
 </div>

@@ -18,6 +18,10 @@ class UsersController extends AppController{
         return $this->redirect(array('controller' => 'users', 'action' => 'login'));
     }
 
+    public function profile(){
+        
+    }
+
 	public function register(){
         if ($this->request->is('post')) {
             $this->User->create();
@@ -36,7 +40,7 @@ class UsersController extends AppController{
                 $email->config('gmail');
 
                 $email->from(
-                    array('mibexzooo@gmail.com' => 'PUBL'))
+                    array('mibexzooo@gmail.com' => 'SOCILIAN'))
                 ->template('register_email', 'register_email_template')
                 ->emailFormat('html')
                 ->viewVars(array(
@@ -64,12 +68,12 @@ class UsersController extends AppController{
             );
 
         }
-            $this->set('title_for_layout', 'Me Cadastrar - PUBL');
+            $this->set('title_for_layout', 'Me Cadastrar - SOCILIAN');
 	}
 
 	public function login(){
         if ($this->Auth->user('email')){
-            return $this->redirect(array('controller' => 'profile', 'action' => 'index'));
+            return $this->redirect(array('action' => 'profile'));
         }
 
         if ($this->request->is('post')) {
@@ -104,16 +108,16 @@ class UsersController extends AppController{
             );
             unset($this->request->data['User']['password']);
         }
-		$this->set('title_for_layout', 'Entrar - PUBL');
+		$this->set('title_for_layout', 'Entrar - SOCILIAN');
 	}
 
     public function register_confirm($email = NULL){
-        $this->set('title_for_layout', 'Confirmar Cadastro - Composers');
+        $this->set('title_for_layout', 'Confirmar Cadastro - SOCILIAN');
         if ($email == NULL){
             return $this->redirect(array('controller' => 'home', 'action' => 'index')); 
         }
 
-        $this->set('title_for_layout', 'Confirmação de Cadastro - Composers');
+        $this->set('title_for_layout', 'Confirmação de Cadastro - SOCILIAN');
         
         $user = $this->User->find('first', array(
             'conditions' => 'User.register_link = "'. $email .'"'
@@ -225,7 +229,7 @@ class UsersController extends AppController{
         //$this->Js->each('alert("whoa!");', true);
         //$this->email_test();
         //echo $datetime->format('d/m/y H:i:s');
-        $this->set('title_for_layout', 'Alterar Senha - Composers');
+        $this->set('title_for_layout', 'Alterar Senha - SOCILIAN');
         if ($this->request->is('post') && $code_reset == NULL) {
             $datetime = new DateTime(); 
             $user = $this->User->find('first', array(
@@ -256,10 +260,10 @@ class UsersController extends AppController{
             }
 
             $email = new CakeEmail();
-            $email->config('smtp');
+            $email->config('gmail');
 
             $email->from(
-                array('noreply@composers.zz.vc' => 'Composers'))
+                array('mibexzooo@gmail.com' => 'SOCILIAN'))
             ->template('reset_pass', 'reset_pass_template')
             ->emailFormat('html')
             ->viewVars(array(
