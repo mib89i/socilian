@@ -20,7 +20,7 @@
 	?>
         <style>
             .bg {
-                background: url(/publ/img/background02.jpg) no-repeat center center;
+                background: url(/socilian/img/background02.jpg) no-repeat center center;
                 position: fixed;
                 width: 100%;
                 height: 550px; /*same height as jumbotron */
@@ -30,7 +30,7 @@
               }
               
             .bg2 {
-                background: url(/publ/img/background01.jpg) no-repeat center center;
+                background: url(/socilian/img/background01.jpg) no-repeat center center;
                 position: absolute;
                 width: 100%;
                 height: 500px; /*same height as jumbotron */
@@ -67,7 +67,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>                    
-                    <?php echo $this->Html->Link('PUBL - Compartilhando Ideias', array('controller' => 'home', 'action' => '/'), array('class' => 'navbar-brand'))?>
+                    <?php echo $this->Html->Link('SOCILIAN ® - Compartilhando Ideias', array('controller' => 'home', 'action' => '/'), array('class' => 'navbar-brand'))?>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -110,7 +110,7 @@
                         <div class="col-md-4 col-sm-6 col-xs-6">
                             <h6 style="font-weight: bold">Tire suas Dúvidas</h6>
                             <p style="color: white">Cel. (16) 99302-6448</p>
-                            <p style="color: white">Email. contato@publ.com.br</p>
+                            <p style="color: white">Email. contato@socilian.com.br</p>
                         </div>
                         
                         <div class="col-md-4 col-sm-6 col-xs-6">
@@ -129,7 +129,7 @@
                 <div class="container" >
                     <div class="row">
                         <div class="col-md-12">
-                            <h6 style="color: white">Direitos Reservados a PUBL®</h6>
+                            <h6 style="color: white">Direitos Reservados a SOCILIAN ®</h6>
                         </div>
                     </div>
                 </div>
